@@ -1,0 +1,47 @@
+Lesson 1
+---------------------------------------------
+https://www.youtube.com/watch?v=dP8RjzfoU8w
+
+https://console.cloud.google.com/projectselector2/bigquery?inv=1&invt=AbjvPg&supportedpurview=project
+
+=========================================================
+
+SELECT country_name, term,region_name, refresh_date, rank, score, week
+FROM bigquery-public-data.google_trends.international_top_terms
+LIMIT 100;
+
+SELECT *
+FROM bigquery-public-data.google_trends.international_top_terms
+LIMIT 100;
+
+===========================================================
+
+
+Lesson 2
+-------------------------------------------------------------
+https://youtu.be/v3ogjHLOm7s
+
+
+===================================================================
+
+-- 1. Макмимальна та мінімальна дати оновлення
+-- SELECT MAX() , MIN(), AVG(), SUM()
+
+SELECT MAX(refresh_date) AS MAX_date, MIN(refresh_date) AS MIN_date
+FROM bigquery-public-data.google_trends.international_top_rising_terms
+LIMIT 100
+
+SELECT *
+FROM bigquery-public-data.google_trends.international_top_rising_terms
+LIMIT 100
+
+--2. Унікальні країни
+SELECT DISTINCT country_name
+FROM bigquery-public-data.google_trends.international_top_rising_terms
+
+
+
+===================================================================
+
+----------------------------------------------
+00 : 07 : 09
